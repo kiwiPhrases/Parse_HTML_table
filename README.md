@@ -11,32 +11,46 @@ For example, if you examine the tables found on Wikipedia's political party stre
 ````
 <table>
     <tr>
-        <td rowspan="2">one</td>
-        <td>two</td>
-        <td>three</td>
+        <th rowspan="2">year</th>
+        <th>col1</th>
+        <th colspan="2">col2</th>
     </tr>
     <tr>
-        <td colspan="2">February</td>
+        <td rowspan="2">aaa</td>
+        <td rowspan="2">bbb</td>
+        <td rowspan="1">ccc</td>
     </tr>
     <tr>
-        <td>end</td>
-        <td>End</td>
+        <td>2017</td>
+        <td rowspan="2">ddd</td>
+    </tr>
+    <tr>
+        <td>2018</td>
+        <td>col1</td>
+        <td colspan="2">col2</td>
     </tr>
 </table>
 ```
 which produces this table:
 <table>
     <tr>
-        <td rowspan="2">one</td>
-        <td>two</td>
-        <td>three</td>
+        <th rowspan="2">year</th>
+        <th>col1</th>
+        <th colspan="2">col2</th>
     </tr>
     <tr>
-        <td colspan="2">February</td>
+        <td rowspan="2">aaa</td>
+        <td rowspan="2">bbb</td>
+        <td rowspan="1">ccc</td>
     </tr>
     <tr>
-        <td>end</td>
-        <td>End</td>
+        <td>2017</td>
+        <td rowspan="2">ddd</td>
+    </tr>
+    <tr>
+        <td>2018</td>
+        <td>col1</td>
+        <td colspan="2">col2</td>
     </tr>
 </table>
 
@@ -46,16 +60,23 @@ You can use the functions below (as illustrated in the notebook) to parse the ab
 s = """
 <table>
     <tr>
-        <td rowspan="2">one</td>
-        <td>two</td>
-        <td>three</td>
+        <th rowspan="2">year</th>
+        <th>col1</th>
+        <th colspan="2">col2</th>
     </tr>
     <tr>
-        <td colspan="2">February</td>
+        <td rowspan="2">aaa</td>
+        <td rowspan="2">bbb</td>
+        <td rowspan="1">ccc</td>
     </tr>
     <tr>
-        <td>end</td>
-        <td>End</td>
+        <td>2017</td>
+        <td rowspan="2">ddd</td>
+    </tr>
+    <tr>
+        <td>2018</td>
+        <td>col1</td>
+        <td colspan="2">col2</td>
     </tr>
 </table>
 """
