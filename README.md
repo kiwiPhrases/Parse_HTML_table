@@ -45,7 +45,7 @@ which produces this table:
     </tr>
     <tr>
         <td>2017</td>
-        <td rowspan="2">ddd</td>
+        <td rowspan="1">ddd</td>
     </tr>
     <tr>
         <td>2018</td>
