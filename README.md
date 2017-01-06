@@ -1,11 +1,11 @@
 # Parse HTML tables with rowspan and colspan attributes
 
 In brief, some tables are not recorded/coded neatly where every row contains the same amount of columns.
-Instead, these tables use attributes rowspan and colspan to map out the table. These are neat but a pain to
+Instead, these tables use attributes ```rowspan``` and ```colspan``` to map out the table. These are neat but a pain to
 scrape. Check out the corresponding notebook for the code that processes these tables into
-Pandas dataframes. 
+```Pandas``` ```DataFrames```. In brief, tables of the sort need to be built from the top and most parsers fail to count correctly either the `rowspan` or `colspan` attributes or some other elements. To date, all Wikitables tested on my functions were parsed correctly (also let me know if yours is not parsed properly). 
 
-For example, if you examine the tables found on Wikipedia's political party strength entry for [Wisconsin] (https://en.wikipedia.org/wiki/Political_party_strength_in_Wisconsin), you will see (cntrl-U in Chrome) that the tables are of the form described above. For a more concise example of the html tables at discussion, observe below the snippet:
+For example, if you examine the tables found on Wikipedia's political party strength entry for [Wisconsin] (https://en.wikipedia.org/wiki/Political_party_strength_in_Wisconsin), you will see (cntrl-U in Chrome) that the tables are of the form described above in that they contain unequal number of cells in each row. For a concise example of the html tables at discussion, observe the snippet below:
 
 
 ````
