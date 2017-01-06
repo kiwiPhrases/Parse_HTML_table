@@ -9,7 +9,7 @@ For example, if you examine the tables found on Wikipedia's political party stre
 
 
 ````
-<table width="100%" border="1">
+<table>
     <tr>
         <td rowspan="2">one</td>
         <td>two</td>
@@ -20,8 +20,8 @@ For example, if you examine the tables found on Wikipedia's political party stre
     </tr>
 </table>
 ```
-which produces this:
-<table width="100%" border="1">
+which produces this table:
+<table>
     <tr>
         <td rowspan="2">one</td>
         <td>two</td>
@@ -31,3 +31,35 @@ which produces this:
         <td colspan="2">February</td>
     </tr>
 </table>
+
+You can use the functions below (as illustrated in the notebook) to parse the above table into a Pandas DataFrame:
+
+
+0	1	2
+0	one	two	three
+1	one	February	February
+2	end	End	NaN
+
+
+```Python
+s = """
+<table width="100%" border="1">
+    <tr>
+        <td rowspan="2">one</td>
+        <td>two</td>
+        <td>three</td>
+    </tr>
+    <tr>
+        <td colspan="2">February</td>
+    </tr>
+    <tr>
+        <td>end</td>
+        <td>End</td>
+    </tr>
+</table>
+"""
+table = bs(s, 'lxml').find('table')
+rows, num_rows, num_cols = pre_process_table(table)
+df = process_rows(rows, num_rows, num_cols)
+print(df)
+```
