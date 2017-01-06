@@ -42,6 +42,7 @@ which produces this table:
 
 You can use the functions below (as illustrated in the notebook) to parse the above table into a Pandas DataFrame:
 ```Python
+#store the above html in a string
 s = """
 <table width="100%" border="1">
     <tr>
@@ -58,7 +59,11 @@ s = """
     </tr>
 </table>
 """
+
+# make string into a bs4 object and find the table of interest
 table = bs(s, 'lxml').find('table')
+
+# use functions to parse the table into a Pandas DataFrame
 rows, num_rows, num_cols = pre_process_table(table)
 df = process_rows(rows, num_rows, num_cols)
 print(df)
