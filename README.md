@@ -27,7 +27,7 @@ For example, if you examine the tables found on Wikipedia's political party stre
     <tr>
         <td>2018</td>
         <td>col1</td>
-        <td colspan="2">col2</td>
+        <td colspan="1">col2</td>
     </tr>
 </table>
 ```
@@ -45,12 +45,12 @@ which produces this table:
     </tr>
     <tr>
         <td>2017</td>
-        <td rowspan="1">ddd</td>
+        <td rowspan="2">ddd</td>
     </tr>
     <tr>
         <td>2018</td>
         <td>col1</td>
-        <td colspan="2">col2</td>
+        <td colspan="1">col2</td>
     </tr>
 </table>
 
@@ -76,7 +76,7 @@ s = """
     <tr>
         <td>2018</td>
         <td>col1</td>
-        <td colspan="2">col2</td>
+        <td colspan="1">col2</td>
     </tr>
 </table>
 """
