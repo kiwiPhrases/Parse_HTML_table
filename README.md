@@ -9,7 +9,7 @@ For example, if you examine the tables found on Wikipedia's political party stre
 
 
 ````
-<table width="100%" border="1">
+<table>
     <tr>
         <td rowspan="2">one</td>
         <td>two</td>
@@ -25,7 +25,7 @@ For example, if you examine the tables found on Wikipedia's political party stre
 </table>
 ```
 which produces this table:
-<table width="100%" border="1">
+<table>
     <tr>
         <td rowspan="2">one</td>
         <td>two</td>
@@ -44,7 +44,7 @@ You can use the functions below (as illustrated in the notebook) to parse the ab
 ```Python
 #store the above html in a string
 s = """
-<table width="100%" border="1">
+<table>
     <tr>
         <td rowspan="2">one</td>
         <td>two</td>
