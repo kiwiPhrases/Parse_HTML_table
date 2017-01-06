@@ -5,7 +5,7 @@ Instead, these tables use attributes rowspan and colspan to map out the table. T
 scrape. Check out the corresponding notebook for the code that processes these tables into
 Pandas dataframes. 
 
-For example, if you examine the tables found on Wikipedia's political party strength entry for [Wisconsin] (https://en.wikipedia.org/wiki/Political_party_strength_in_Wisconsin), you will see (cntrl-U in Chrome) that the tables are of the form described above. For a more concise example of the html tables at discussion, observe below the snippet from the corresponding stackoverlflow [page](http://stackoverflow.com/questions/28763891/what-should-i-do-when-tr-has-rowspan)
+For example, if you examine the tables found on Wikipedia's political party strength entry for [Wisconsin] (https://en.wikipedia.org/wiki/Political_party_strength_in_Wisconsin), you will see (cntrl-U in Chrome) that the tables are of the form described above. For a more concise example of the html tables at discussion, observe below the snippet:
 
 
 ````
